@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1058050321294",
+    "project_id": "usermanagerapp-fcec9",
+    "storage_bucket": "usermanagerapp-fcec9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058050321294:android:2b1dac5c19c0ca355912df",
+        "android_client_info": {
+          "package_name": "com.example.usermanagerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwoOiEXs7gYk2UjLDRyqQG8o6Fp49wCv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
