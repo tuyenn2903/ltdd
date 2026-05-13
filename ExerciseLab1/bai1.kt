@@ -1,7 +1,7 @@
+package exerciselab1.bai1
 
 fun main() {
     println("Hello, world!")
-
 
     val age = 5
     val name = "Rover"
@@ -59,24 +59,19 @@ fun main() {
     println("Dice rolled: ${myFirstDice.roll()}")
 }
 
-// Hàm không có đối số :
 fun printHello() {
     println("Hello Kotlin")
 }
 
-// Hàm có đối số :
 fun printBorder(border: String, timesToRepeat: Int) {
     repeat(timesToRepeat) { print(border) }
     println()
 }
 
-// Hàm trả về Int
 fun rollDice(): Int {
-    val randomNumber = (1..6).random()
-    return randomNumber
+    return (1..6).random()
 }
 
-//  repeat() lồng nhau
 fun printCakeBottom(age: Int, layers: Int) {
     repeat(layers) {
         repeat(age + 2) { print("@") }
@@ -84,7 +79,6 @@ fun printCakeBottom(age: Int, layers: Int) {
     }
 }
 
-// Class có tham số
 class Dice(private val numSides: Int) {
     fun roll(): Int = (1..numSides).random()
 }

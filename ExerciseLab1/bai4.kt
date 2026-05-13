@@ -1,21 +1,16 @@
-// bai4.kt
-// xài try catch, thread, object, enum
+package exerciselab1.bai4
+
 import kotlin.random.Random
 
 fun main() {
     println("=== BAI 4 ===")
-
 
     val t = Thread {
         val output = getValueBlocking()
         println("Thread got value = $output (thread=${Thread.currentThread().name})")
     }
     t.start()
-
-
-
     t.join()
-
 
     try {
         riskyWork()
@@ -38,12 +33,10 @@ fun main() {
     println("Done.")
 }
 
-
 fun getValueBlocking(): Double {
     try {
         Thread.sleep(300) // giả lập chờ
     } catch (_: InterruptedException) {
-        // bị interrupt
         return -1.0
     }
     return Random.nextDouble()

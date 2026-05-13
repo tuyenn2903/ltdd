@@ -16,19 +16,19 @@ import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.LocationOn
 
-
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+// ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT ĐỂ SỬA LỖI CHỮ R BỊ ĐỎ:
+import com.example.diceroller.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,14 +59,12 @@ fun BusinessCardApp() {
     }
 }
 
-
 @Composable
 fun ProfileSection() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(top = 100.dp),
-
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -74,7 +72,7 @@ fun ProfileSection() {
             painter = painterResource(id = R.drawable.my_photo),
             contentDescription = "My Photo",
             modifier = Modifier
-                .size(170.dp) 
+                .size(170.dp)
                 .clip(CircleShape)
                 .border(3.dp, Color(0xFF00796B), CircleShape)
         )
@@ -102,10 +100,8 @@ fun ContactSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 60.dp),
-
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
         ContactRow(Icons.Filled.Phone, "+84 392 840 394")
         ContactRow(Icons.Filled.LocationOn, "Da Nang, Viet Nam")
         ContactRow(Icons.Filled.Email, "maitran122333a@gmail.com")
@@ -121,7 +117,6 @@ fun ContactRow(
         modifier = Modifier.padding(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-
         Icon(
             imageVector = icon,
             contentDescription = null,

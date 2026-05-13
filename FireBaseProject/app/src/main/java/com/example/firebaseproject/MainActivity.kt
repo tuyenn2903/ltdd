@@ -80,7 +80,7 @@ fun FirebaseUI(context: Context) {
             onValueChange = { courseName.value = it },
             placeholder = { Text(text = "Enter your course name") },
             modifier = Modifier.padding(16.dp).fillMaxWidth(),
-            textStyle = TextStyle(color = Color.White, fontSize = 15.sp),
+            textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
             singleLine = true,
         )
 
@@ -91,7 +91,7 @@ fun FirebaseUI(context: Context) {
             onValueChange = { courseDuration.value = it },
             placeholder = { Text(text = "Enter your course duration") },
             modifier = Modifier.padding(16.dp).fillMaxWidth(),
-            textStyle = TextStyle(color = Color.White, fontSize = 15.sp),
+            textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
             singleLine = true,
         )
 
@@ -102,7 +102,7 @@ fun FirebaseUI(context: Context) {
             onValueChange = { courseDescription.value = it },
             placeholder = { Text(text = "Enter your course description") },
             modifier = Modifier.padding(16.dp).fillMaxWidth(),
-            textStyle = TextStyle(color = Color.White, fontSize = 15.sp),
+            textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
             singleLine = true,
         )
 

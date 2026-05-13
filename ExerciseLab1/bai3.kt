@@ -1,8 +1,6 @@
-// bai3.kt
-
+package exerciselab1.bai3
 
 fun main() {
-
     val numbers = listOf(0, 3, 8, 4, 0, 5, 5, 8, 9, 2)
     val setOfNumbers = numbers.toSet()
     println("setOfNumbers = $setOfNumbers")
@@ -40,12 +38,12 @@ fun main() {
         .sorted()
     println("filteredWords = $filteredWords")
 
-    // Scope functions: let :
+    // Scope functions: let
     val maybeText: String? = "Hello"
     val lengthOrNull = maybeText?.let { it.length }
     println("lengthOrNull = $lengthOrNull")
 
-    // Scope functions: apply :
+    // Scope functions: apply
     val builder = StringBuilder().apply {
         append("Kotlin ")
         append("apply() ")
@@ -53,7 +51,7 @@ fun main() {
     }
     println(builder.toString())
 
-    // Backing property :
+    // Backing property
     val holder = BackingPropertyDemo()
     println("currentScrambledWord = ${holder.currentScrambledWord}")
 
@@ -62,23 +60,23 @@ fun main() {
     val safe = a?.trim()?.uppercase()
     println("safe = $safe")
 
-    // Lambda :
+    // Lambda
     val triple: (Int) -> Int = { x: Int -> x * 3 }
     println("triple(5) = ${triple(5)}")
 
-    // Companion object :
+    // Companion object
     println("DetailActivity.LETTER = ${DetailActivity.LETTER}")
 
     // Delegated property
     val lazyValue: String by lazy { "I am lazy" }
     println("lazyValue = $lazyValue")
 
-    // lateinit :
+    // lateinit
     val late = LateInitDemo()
     late.init("assigned later")
     println("late.currentWord = ${late.currentWord}")
 
-    // Elvis operator :
+    // Elvis operator
     var quantity: Int? = null
     println("quantity ?: 0 = ${quantity ?: 0}")
     quantity = 4
@@ -86,19 +84,19 @@ fun main() {
 }
 
 class BackingPropertyDemo {
-    private var _currentScrambledWord = "test" // :
+    private var _currentScrambledWord = "test"
     val currentScrambledWord: String
         get() = _currentScrambledWord
 }
 
 class DetailActivity {
     companion object {
-        const val LETTER = "letter" // :
+        const val LETTER = "letter"
     }
 }
 
 class LateInitDemo {
-    lateinit var currentWord: String // :
+    lateinit var currentWord: String
 
     fun init(value: String) {
         currentWord = value
